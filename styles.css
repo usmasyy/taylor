@@ -1,0 +1,91 @@
+/* styles.css */body {
+    font-family: Arial, sans-serif;
+    font-size: larger;
+    font-weight: 800;
+    text-align: center;
+    background-color: #200c7abd; /* Light gray background */
+    transition: background-color 0.5s ease;
+    transition: opacity 0.5s ease; /* Add transition effect */
+}
+
+/* After 4 seconds, change the background color to blue */
+body.loaded {
+    background-color: #9ae644; /* Light blue */
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0; /* Start with opacity 0 (invisible) */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 (visible) */
+    }
+}
+
+/* Apply the transition to the entire page */
+body.loaded {
+    animation: fadeInOut 0.5s ease; /* Apply the fade-in/fade-out animation */
+}
+/* Initial color (first 4 seconds) for the welcome message */
+.welcome-message {
+    color: #ff0000; /* Red */
+    transition: opacity 4s ease, color 0.5s ease; /* Add color transition */
+}
+
+/* Color after 4 seconds for the welcome message */
+body.loaded .welcome-message {
+    color: #0000ff; /* Blue */
+}
+
+.site-image {
+    max-width: 100%; /* Set the maximum width to 100% of its container */
+    max-height: 200px; /* Set the maximum height to 200 pixels (adjust as needed) */
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+
+.dlap-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    position:relative;
+    top: 60px;
+    right: 130px;
+    animation: curtainTransition 1s ease-in-out;
+    
+}
+@keyframes curtainTransition {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+/* Move the button below the image */
+
+
+/* Add a hover effect to the button */
+.dlap-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Additional styling inspired by Taylor Swift's brand */
+/* Feel free to customize further! */
+.success-message{
+    color: #43443e;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 120px;
+    right: 20px;
+
+    
+}
